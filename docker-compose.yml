@@ -1,0 +1,16 @@
+services:
+  easyedit:
+    # GitHub Container Registry (Recommended)
+    # simple mode - ghcr.io/easyedit/easyedit-simple:latest
+    # default mode - ghcr.io/easyedit/easyedit:latest
+    # Docker Hub (Alternative)
+    # simple mode - easyeditteam/easyedit-simple:latest
+    # default mode - easyeditteam/easyedit:latest
+    image: ghcr.io/easyedit/easyedit-simple:latest
+    container_name: easyedit
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    # For IPv4-only environments
+    #environment:
+    #  - DISABLE_IPV6=true
